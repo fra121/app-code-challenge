@@ -1,8 +1,9 @@
-import env from '/environments/environment'
-
+import { environment } from 'environments/enviroment';
 export class PersonService {
-  getAll() {
-    return fetch(env.apiBaseUrl + '?results=15')
+  getAll(timezone = '', age = '') {
+    let filters = `timezone=${timezone},age${age}`;
+
+    return fetch(`${environment.apiBaseUrl}?inc=name,picture,dob,location,email,phone&results=15&${filters}`)
       .then(response => response.json());
   }
 }

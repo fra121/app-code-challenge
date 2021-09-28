@@ -1,6 +1,8 @@
 .PersonItem {
-  box-shadow: 1px 2px 4px 1px rgba(100, 100, 100, .4);
+  box-shadow: 1px 2px 4px 1px rgba(100, 100, 100, 0.4);
   border-radius: 3px;
+  background-color: white;
+  cursor: pointer;
 }
 
 .profile-image {

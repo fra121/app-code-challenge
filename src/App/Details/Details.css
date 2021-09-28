@@ -1,0 +1,25 @@
+.back-icon {
+  cursor: pointer;
+  margin-bottom: 32px;
+}
+
+.details-container {
+  background-color: rgb(236, 236, 236);
+  padding: 24px;
+}
+
+.profile-photo {
+  transform: translateY(-48px);
+  margin-bottom: -40px;
+  width: 136px;
+  height: 160px;
+  object-fit: cover;
+}
+
+h2 {
+  margin-bottom: 8px;
+}
+
+.details-container > div:not(:last-of-type) {
+  margin-bottom: 8px;
+}
