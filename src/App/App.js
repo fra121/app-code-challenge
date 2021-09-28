@@ -27,10 +27,32 @@ function App() {
     history.push("/details");
   }
 
+  // Usually I would do this using a query on a backend
+  function filterTheList(list) {
+    let filteredList = [];
+
+    for (let i = 0; i < list.length; i++) {
+      if (list[i].dob.age < 18) {
+        continue;
+      }
+      const timezone = +list[i].location.timezone.offset.replace(':', '');
+
+      if (timezone >= -100 && timezone <= 100) {
+        filteredList.push(list[i]);
+
+        if (filteredList.length === 15) {
+          break;
+        }
+      }
+    }
+
+    return filteredList;
+  }
+
   useEffect(() => {
     new PersonService().getAll()
       .then(result => {
-        setList(result.results);
+        setList(filterTheList(result.results));
       });
   }, []);
 
