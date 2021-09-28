@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 40px auto;
+  max-width: 500px;
+  width: 90vw;
+}
+
+.PersonList > div:not(:last-of-type) {
+  margin-bottom: 16px;
+}

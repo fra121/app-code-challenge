@@ -1,0 +1,18 @@
+.PersonItem {
+  box-shadow: 1px 2px 4px 1px rgba(100, 100, 100, .4);
+  border-radius: 3px;
+}
+
+.profile-image {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+}
+
+.name-container {
+  margin: 2rem 1rem;
+}
+
+.name-container > div:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
